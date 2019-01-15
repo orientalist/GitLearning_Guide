@@ -1,0 +1,16 @@
+透過filter-branch可一次修改多個commit的檔案
+	指令：
+		git filter-branch --tree-filter "terminal指令"
+	ex:
+		git filter-branch --tree-filter "rm -f config/database.config"
+	說明：
+		filter-branch可根據不同“filter”逐個處理commit
+		這裡使用--tree-filter(將後方指令套用到checkout每個commit)，執行指令並commit
+
+	反悔：
+		git會將filter-branch前的狀態儲存在.git/refs/original/refs/head中（其實只是備份指令執行前HEAD的SHA1碼）
+		可取出SHA1碼後回至該狀態
+		git reset --hard sha1碼
+		
+		或
+		git reset refs/original/refs/heads/master --hard

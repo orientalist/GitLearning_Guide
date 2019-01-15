@@ -1,0 +1,15 @@
+標籤有兩種：
+	1.輕量標籤（lightweight tag）:
+		直接貼至要貼的commit，指令：
+		git tag 標籤名稱 commit的sha1碼
+		ex:git tag test_tag 51d54ff
+	2.有附註標籤（annotated tag）:
+		會附加含有“內容”的tag至commit，指令：
+		git tag 標籤名稱 commit的sha1碼 -a(表示annotated) -m(表述輸入文字)tag內容
+		ex:git tag test_tag 51d54ff -a -m "tag a annotated tag"
+
+刪除標籤：
+	git tag -d 標籤名稱
+		
+
+

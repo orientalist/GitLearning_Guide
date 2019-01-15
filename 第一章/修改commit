@@ -1,0 +1,10 @@
+有四種方法
+1.git rebase
+2.以git reset拆除commit，重新commit
+3.使用--amend修改“最後一次”commit
+
+使用--amend
+	直接git commit --amend -m "message"
+
+修改更早的紀錄
+	使用rebase

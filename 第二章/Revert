@@ -1,0 +1,6 @@
+Revert表示做一次“新”的commit以取消”前一次“commit
+可以revert revert
+通常用於“有禮貌”的取消commit
+
+指令：
+	git revert HEAD --no-edit

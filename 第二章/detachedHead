@@ -1,0 +1,7 @@
+detached Head即Head沒有指向任何一個分支(Repository)
+	發生原因：
+		1.使用checkout到未指向分支的commit
+		2.Rebase
+		3.切換到遠端分支
+		4.事實上是“未指到本地分支”
+	

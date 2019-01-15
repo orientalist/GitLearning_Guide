@@ -1,0 +1,9 @@
+git checkout filename -單一檔案救回
+git checkout . -救回全部檔案（曾git add過）
+
+注意！已commit則無法救回！
+
+git checkout 分支-版數	filename
+	將某分支數版前某檔案覆蓋至現在的暫存區
+	git checkout head-2 index.html
+

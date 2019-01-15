@@ -1,0 +1,19 @@
+Stash(藏)
+	git stash可將“目前”狀態“暫存”起來（任何增/刪/修），指令：
+		git stash
+	可使用git stash list調閱目前存在的stash
+	list中stash@{數字}的數字越大表示越舊
+	
+	取回stash狀態：
+		git stash pop stash@{數字}
+		ex:git stash pop stash@{2}
+	說明：
+		pop指令可將某個stash“狀態”套用至“目前”分支上，套用成功後該stash被刪除
+		若不指定pop哪個版本，自動取最新（數字最小）
+	刪除stash:
+		git stash drop stash@{數字}
+
+	透過apply回復stash
+		git stash apply stash@{數字}
+		與pop不同：不會刪除stash
+		

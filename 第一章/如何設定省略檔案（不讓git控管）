@@ -1,0 +1,15 @@
+1.於專案目錄新增.gitignore
+2.編輯檔案
+	filename.extension
+	路徑/filename.extension
+	*.extension
+3.若要ignore的檔案在.gitignore前已加入
+	1.git rm --cache
+4.若要一次清除符合.gitignore的檔案
+	1.git clean -fx(f表示強制，x表示刪除)
+
+或
+	於git add時加入-f參數
+	git add -f filename
+	同樣可忽略不加入該檔案
+	

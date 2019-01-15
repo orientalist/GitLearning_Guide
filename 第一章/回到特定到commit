@@ -1,0 +1,11 @@
+有相對與絕對兩種做法
+	相對：
+	git reset 版本sha1/branch/head ^(一個代表前“一”次)/-數字（前幾版）
+	ex:
+		git reset eee775d^^^=git reset eee775d-3
+		git reset master^^^=git reset master-3
+	絕對：
+	git reset 版本sha1
+	ex:
+		git reset c4027a5
+

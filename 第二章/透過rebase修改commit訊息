@@ -1,0 +1,7 @@
+輸入
+	git rebase -i commit的SHA1碼	
+		修改commit，從HEAD“現在”的位置到"指定"的commit
+		開啟修改次窗後，在commit前指定要使用的指令
+		在編輯視窗修改commit訊息，存檔並離開＃
+	反悔：
+		git reset ORIG_HEAD --hard

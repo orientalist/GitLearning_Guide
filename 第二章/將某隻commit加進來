@@ -1,0 +1,12 @@
+git cherry-pick commit的sha1碼
+	說明：
+		將該commit與現在commit差異檔案接入
+		ex:git cherry-pick 124ff640
+	一次接多個
+		git cherry-pick sha1 sha1 sha1
+	注意：會自動完成commit建立一個新的commit
+
+	若不想自動commit:
+		git cherry-pick sha1 --no-commit
+		接過的commit會停留在暫存區
+		

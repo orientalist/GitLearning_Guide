@@ -1,0 +1,1 @@
+當git checkout commitSHA1碼時，會移動HEAD到指定的Commit，但分支（Branch）不會移動，會造成“斷頭”

@@ -1,0 +1,16 @@
+在git理，不論新增／刪除/修改檔案，都是“修改”
+
+刪除檔案：
+	rm file -＞git add file name-＞git commit -m "message"
+	git 刪除：
+		git rm filename(rm file+git add)
+	#重點：並非要刪除檔案，而是要解除git對他的控管：
+		加上--cache參數
+		git rm file --cache
+
+變更檔名：
+	mv file->git add file name->git commit -m "message"
+	對git而言，改檔名等於刪除就檔並加入新檔
+	git改檔名：
+		git mv filename(mv file+git add)
+	

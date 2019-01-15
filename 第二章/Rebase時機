@@ -1,0 +1,1 @@
+Rebase不像Merge會產新一個“獨立”的Commit，壞處是取消不易，且等於更改歷史紀錄（抽離原本的元Commit），較好用於未push時整理合併，push後應盡量避免

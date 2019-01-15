@@ -1,0 +1,35 @@
+使用分支，輸入
+	git branch 顯示該Repository所擁有的所有分支，預設為master，＊表示“目前”正在的分支
+	git branch 分支名稱
+		為該Repository增加新分支
+		ex:git branch test
+	
+
+修改branch名稱：
+	git branch -m branch就名稱 branch新名稱
+刪除branch:
+	git branch -d branch名稱
+	若該分支上有檔案未“合併”，-d不能刪除，需使用-D
+	刪除“為合併”的分支，則該分支標籤被刪除，“但”commit仍然存在（跟空氣一樣），若想救回，可記下該分支的commit SHA1或使用reflog(保留30天)
+切換分支：
+	git checkout 分支名稱(其實就是將HEAD移動到該分支)
+	#注意：若再修改檔案且未commit時切換分之，修改的檔案會留在工作區
+合併分支：
+	首先切換到要“匯入”分支的“主分支”，輸入
+	git merge 被合併的分支名稱
+	＃注意：向下合併為快轉模式（fast-foreward），僅移動分支標籤
+		平行合併會另外建立一個commit，並將合併分支移動到該commit
+
+	透過rebase:
+		rebase指將一個branch脫離它原本的“元commit”，嫁接到另一branch上，而該branch自元commit後做的commit會重新計算並嫁接到被rebase的branch上
+		指令：先切換至“要”rebase的branch，輸入
+		git rebase 被嫁接的branch
+		＃注意：
+			rebase與merge不同，不會產生commit(要反悔拆他)，要取消，可透過reflog查詢rebase前最後一次commit，再reset過去
+
+補充： ORIGIN_HEAD
+       ORIGIN_HEAD為GIT自動記錄“危險操作”(如reset，rebase）的HEAD變數，若想取消修改，可使用
+	git reset ORIGIN_HEAD
+
+
+

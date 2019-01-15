@@ -1,0 +1,5 @@
+步驟：
+	1.git rebase -i commit的SHA1
+	2.在要“拆分”的commit前輸入edit
+	3.rebase執行，停在edit處，於此進行“編輯”動作（再次處為reset commit，分別add與commit）
+	4.重點：完成“編輯”後，輸入git rebase --continue，“繼續”rebase

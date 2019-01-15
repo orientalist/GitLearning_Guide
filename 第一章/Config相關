@@ -1,0 +1,11 @@
+安裝完git後會於根目錄新增.gitconfig擋
+可開啟設定全域變數（如使用者名稱與帳號）
+亦可透過指令
+	git config --global user.name= "username"
+	git config --global user.email="useremail"
+
+備註：
+	當想要使專案使用其他帳號時，可於專案資料夾設定
+	git config --local user.name="username"
+	git config --local user.email="useremail"
+

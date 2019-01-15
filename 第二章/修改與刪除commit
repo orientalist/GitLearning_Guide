@@ -1,0 +1,9 @@
+修改commit順序：
+	1.git rebase -i commit的sha1碼
+	2."直接"整行調整commit
+	3.wq
+
+刪除commit:
+	1.git rebase -i commit的sha1碼
+	2.在要刪除的commit前輸入drop
+	3.wq

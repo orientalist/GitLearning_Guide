@@ -1,0 +1,7 @@
+如果想要回收一物件（blob/tree/commit...),可以先將它變為unreachable，再交由gc清除
+	指令：
+		git reset HEAD^ --hard(產生一個unreachable的commit)
+		git reflog expire --all --expire=now(清除reflog紀錄)
+		(至此真正轉換為unreachable)
+		git fsck --unreachable(確認unreachable物件)
+		git gc --prune=now(執行gc)

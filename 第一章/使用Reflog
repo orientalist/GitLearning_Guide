@@ -1,0 +1,3 @@
+Reflog用以顯示所有Commit的Sha1碼，可用於搭配Reset回到特定版本狀態
+Reflog原理：任何HEAD移動（Commit,Reset）都會記錄到Reflog
+

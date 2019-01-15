@@ -1,0 +1,27 @@
+查詢commit紀錄，使用git log
+
+可以搭配不同參數
+	git log --oneline(一列顯示
+	git log --graph(增加可讀性)
+	git log --onelinr --graph(一列且可讀)
+
+查詢特定的commit:
+	參數 --author="user name"(user name不必寫完，""必要)
+		可搭配｜（或）使用
+			git log --author="a|b"
+	參數 --grep="內容"-查詢commit message包含“”內文字的commit
+	參數 -S "" 查詢add檔案內包含“”內字的commit
+	參數 --since="開始時間" --untill="結束時間" --after="指定時間後"
+		查詢時間區間內的commit
+		ex:git log --since="9am" --untill="12pm" --after="2017/8/15"
+ 
+檢視特定檔案的commit紀錄
+	git log filename
+	加上-p參數：檢視該次commit修改內容
+
+檢視每行修改者：
+	git blame filename
+	檔案太大，使用-L參數指定行數
+	git blame -L 開始行，結束行 filename
+
+

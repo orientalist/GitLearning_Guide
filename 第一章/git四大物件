@@ -1,0 +1,13 @@
+四大物件：
+	Blob物件：
+		將檔案透過git add 加入暫存區後，git會透過sha1壓縮加密該檔案“內容”，並以sha1字串首2自在.git/object下建立資料夾，後38字建立文字檔，此即blob（binary large object）物件，可還原出該檔案“內容”
+	Tree物件：
+		blob物件存放檔案“內容”，tree物件則是在commit後生成，用來記錄該次commit檔案的檔名，“樹狀"節點sha1碼，且tree物件下會“指向”一到多個tree與blob物件
+	Commit物件：
+		commit後生成，指向該次commit的tree物件，本次commit時間，commit作者，commit訊息。
+		非第一次commit，會生成新的commit物件，Tree物件與有“更新”的blob物件，並且沒有變更的物件會指向“原本”的tree或blob物件，commit物件同時會有parent資訊，指向“上一次”commit物件
+	Tag物件：
+		Tag物件只能“手動”產生，貼在某個“Commit”上，且輕量的Tag不會產生物件
+		指令：
+			git tag -a tag名稱 -m "tag文字"
+		產生tag物件指向commit物件

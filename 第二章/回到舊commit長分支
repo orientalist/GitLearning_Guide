@@ -1,0 +1,10 @@
+有多種方式：
+	1.git checkout commit的SHA1-移動HEAD到該commit
+	2.git branch 分支名稱-建立分支＃（建立branch不移動HEAD）
+
+	1.git checkout commit的SHA1-移動HEAD到該commit
+	2.git checkout -b branch名稱#(建立branch並移動HEAD)
+
+	1.git branch branch名稱 commit的SHA1碼
+
+	1.git checkout -b branch名稱 commit的SHA1碼(直接建立分支並移動過去)

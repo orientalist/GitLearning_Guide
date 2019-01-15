@@ -1,0 +1,16 @@
+git filter-branch --tree-filter雖能將膽胺刪除，但其實可透過reset重置
+
+全部斷乾淨：
+	git filter-branch -f --tree-filter "rm -f file.extension"
+	說明：
+		這次多了-f參數，用以強制覆寫備份點
+	rm .git/refs/original/refs/heads/master
+	說明：
+		強制移除危險動作備份點
+	git reflog expire --all --expire=now
+	說明：
+		將reflog所有記錄強制過期
+	git gc --prune=now
+	說明：
+		啟動垃圾回收機制
+

@@ -1,0 +1,8 @@
+HEAD是一個指標，指向Repository現在的“分支”
+.git內有HEAD檔，內容類似：
+	ref:/refs/heads/master
+	代表目前Repository指向版本“檔案”的路徑
+開啟refs/heads/master:
+	be8e9ab91c95b41071cbd9e3b19ca1715abf3400
+	40字元碼代表目前分支
+

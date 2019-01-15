@@ -1,0 +1,21 @@
+cd至資料夾，輸入：
+	git init(初始化git版控)
+	會於該資料夾建立.git資料夾(精華在此)
+解除git版控：
+	移除.git資料夾（風險巨大）
+git status:
+	用以檢視目前資料夾狀態
+	加入檔案後，以git status檢視，會顯示“untrack files”-該檔案未被加入git版控系，欲將該檔案交給git版空，使用：
+git add [檔案名稱]（將檔案放入暫存區）
+
+if git add後又修改檔案：
+	請再次git add 檔案，否則git commit的是git add時的檔案 
+
+欲將檔案永久保存，請在git add後使用git commit -m "文字"
+完成後表示該次修改已從“暫存區”存放至“Repository(儲存庫)“即建立了一個“版本”
+
+
+重點：git每次commit的檔案只有“暫存區”中的檔案（不在暫存區的不會被儲存）
+
+補充：一次完成git add與git commit:
+	git commit -a -m "版本訊息"(只對在Repository中的檔案有用)

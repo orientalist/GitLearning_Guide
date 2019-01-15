@@ -1,0 +1,7 @@
+輸入以下指令可簡化git指令
+	git config --global alias.[簡寫名] 指令名
+     ex:
+	git config --global alias.status st
+
+亦可包含參數：
+	git config --global alias.l "log --oneline --graph"(一定要使用“”)

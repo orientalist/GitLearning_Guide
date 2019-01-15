@@ -1,0 +1,4 @@
+步驟：
+	1.git rebase -i commit的SHA1碼
+	2.在“要被”合併的commit前輸入squash	
+	3.進入vi，輸入合併後的commit訊息

@@ -1,0 +1,6 @@
+1.git reset拆除最後一次commit
+2.加入新的檔案git add file
+3.git commit --amend -m "message"
+
+
+#注意！commit後新增空資料夾，git狀態不會改變，因git是以“檔案內容”計算，若要將空資料夾加入，可在內添加.開頭檔案
